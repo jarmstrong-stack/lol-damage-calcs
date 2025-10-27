@@ -1,0 +1,62 @@
+{
+  "ludens_tempest": {
+    "id": "ludens_tempest",
+    "name": "Luden's Tempest",
+    "stats": {
+      "ability_power": 80,
+      "ability_haste": 20
+    },
+    "passives": [
+      {
+        "type": "spell_burst",
+        "damage": 100,
+        "scaling": {"ability_power": 0.1},
+        "cooldown": 10
+      }
+    ]
+  },
+  "rabadons_deathcap": {
+    "id": "rabadons_deathcap",
+    "name": "Rabadon's Deathcap",
+    "stats": {
+      "ability_power": 120
+    },
+    "passives": [
+      {
+        "type": "stat_multiplier",
+        "stat": "ability_power",
+        "multiplier": 0.35
+      }
+    ]
+  },
+  "liandrys_anguish": {
+    "id": "liandrys_anguish",
+    "name": "Liandry's Anguish",
+    "stats": {
+      "ability_power": 80,
+      "ability_haste": 20
+    },
+    "passives": [
+      {
+        "type": "dot_percent_max_health",
+        "percent": 0.01,
+        "duration": 4
+      }
+    ]
+  },
+  "nashors_tooth": {
+    "id": "nashors_tooth",
+    "name": "Nashor's Tooth",
+    "stats": {
+      "ability_power": 100,
+      "attack_speed": 0.5
+    },
+    "passives": [
+      {
+        "type": "on_hit_magic_damage",
+        "base_damage": 15,
+        "scaling": {"ability_power": 0.2}
+      }
+    ]
+  }
+}
