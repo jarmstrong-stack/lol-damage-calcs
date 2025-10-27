@@ -1,0 +1,48 @@
+{
+  "domination_electrocute": {
+    "id": "domination_electrocute",
+    "name": "Domination - Electrocute",
+    "stats": {
+      "ability_power": 18
+    },
+    "passives": [
+      {
+        "type": "spell_burst",
+        "damage": 30,
+        "scaling": {"ability_power": 0.4, "attack_damage": 0.25},
+        "cooldown": 25
+      }
+    ]
+  },
+  "sorcery_arcane_comet": {
+    "id": "sorcery_arcane_comet",
+    "name": "Sorcery - Arcane Comet",
+    "stats": {
+      "ability_power": 18,
+      "ability_haste": 8
+    },
+    "passives": [
+      {
+        "type": "spell_burst",
+        "damage": 35,
+        "scaling": {"ability_power": 0.2},
+        "cooldown": 20
+      }
+    ]
+  },
+  "precision_press_the_attack": {
+    "id": "precision_press_the_attack",
+    "name": "Precision - Press the Attack",
+    "stats": {
+      "attack_speed": 0.15,
+      "attack_damage": 10
+    },
+    "passives": [
+      {
+        "type": "on_hit_magic_damage",
+        "base_damage": 15,
+        "scaling": {"attack_damage": 0.3}
+      }
+    ]
+  }
+}
