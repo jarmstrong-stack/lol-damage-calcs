@@ -1,0 +1,116 @@
+{
+  "ahri": {
+    "id": "ahri",
+    "name": "Ahri",
+    "role": "mage",
+    "base_stats": {
+      "attack_damage": 53,
+      "attack_damage_per_level": 3,
+      "attack_speed": 0.668,
+      "attack_speed_per_level": 0.02,
+      "ability_power": 0,
+      "ability_haste": 0
+    },
+    "abilities": {
+      "Q": {
+        "name": "Orb of Deception",
+        "max_rank": 5,
+        "rank_levels": [1, 4, 5, 7, 9],
+        "base_damage": [40, 65, 90, 115, 140],
+        "scalings": {"ability_power": 0.45},
+        "cooldown": [7, 6.5, 6, 5.5, 5],
+        "damage_type": "magic",
+        "damage_window": "instant"
+      },
+      "W": {
+        "name": "Fox-Fire",
+        "max_rank": 5,
+        "rank_levels": [3, 6, 9, 11, 13],
+        "base_damage": [120, 180, 240, 300, 360],
+        "scalings": {"ability_power": 0.6},
+        "cooldown": [9, 8, 7, 6, 5],
+        "damage_type": "magic",
+        "damage_window": "instant"
+      },
+      "E": {
+        "name": "Charm",
+        "max_rank": 5,
+        "rank_levels": [2, 8, 10, 12, 13],
+        "base_damage": [60, 90, 120, 150, 180],
+        "scalings": {"ability_power": 0.45},
+        "cooldown": [12, 11, 10, 9, 8],
+        "damage_type": "magic",
+        "damage_window": "instant"
+      },
+      "R": {
+        "name": "Spirit Rush",
+        "max_rank": 3,
+        "rank_levels": [6, 11, 16],
+        "base_damage": [210, 320, 430],
+        "scalings": {"ability_power": 0.75},
+        "cooldown": [130, 105, 90],
+        "damage_type": "magic",
+        "damage_window": "instant"
+      }
+    },
+    "combo_sequence": ["E", "Q", "W", "R"]
+  },
+  "cassiopeia": {
+    "id": "cassiopeia",
+    "name": "Cassiopeia",
+    "role": "battlemage",
+    "base_stats": {
+      "attack_damage": 53,
+      "attack_damage_per_level": 3.5,
+      "attack_speed": 0.647,
+      "attack_speed_per_level": 0.018,
+      "ability_power": 0,
+      "ability_haste": 0
+    },
+    "abilities": {
+      "Q": {
+        "name": "Noxious Blast",
+        "max_rank": 5,
+        "rank_levels": [1, 4, 6, 8, 10],
+        "base_damage": [75, 110, 145, 180, 215],
+        "scalings": {"ability_power": 0.9},
+        "cooldown": [3.5, 3.5, 3.5, 3.5, 3.5],
+        "damage_type": "magic",
+        "damage_window": "dot",
+        "duration": 3
+      },
+      "W": {
+        "name": "Miasma",
+        "max_rank": 5,
+        "rank_levels": [3, 5, 7, 9, 11],
+        "base_damage": [20, 35, 50, 65, 80],
+        "scalings": {"ability_power": 0.15},
+        "cooldown": [24, 22, 20, 18, 16],
+        "damage_type": "magic",
+        "damage_window": "dot",
+        "duration": 4
+      },
+      "E": {
+        "name": "Twin Fang",
+        "max_rank": 5,
+        "rank_levels": [2, 8, 10, 12, 13],
+        "base_damage": [56, 72, 88, 104, 120],
+        "scalings": {"ability_power": 0.1},
+        "cooldown": [0.9, 0.85, 0.8, 0.75, 0.7],
+        "damage_type": "magic",
+        "damage_window": "instant"
+      },
+      "R": {
+        "name": "Petrifying Gaze",
+        "max_rank": 3,
+        "rank_levels": [6, 11, 16],
+        "base_damage": [150, 250, 350],
+        "scalings": {"ability_power": 0.5},
+        "cooldown": [120, 110, 100],
+        "damage_type": "magic",
+        "damage_window": "instant"
+      }
+    },
+    "combo_sequence": ["Q", "E", "E", "E", "R"]
+  }
+}
