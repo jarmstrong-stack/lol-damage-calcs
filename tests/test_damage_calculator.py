@@ -72,3 +72,51 @@ def test_best_burst_build_identifies_ludens_rabadons(
     assert best.items == ("Luden's Tempest", "Rabadon's Deathcap")
     assert best.rune == "Domination - Electrocute"
     assert best.metric_value == pytest.approx(1961.6, rel=0.01)
+
+
+def test_physical_burst_respects_armor(
+    repositories: tuple[ChampionRepository, ItemRepository, RuneRepository]
+) -> None:
+    champion_repo, item_repo, rune_repo = repositories
+    calculator = DamageCalculator(item_repository=item_repo, rune_repository=rune_repo)
+    zed = champion_repo.get("zed")
+    items = [item_repo.get("Eclipse")]
+    runes = [rune_repo.get("precision_press_the_attack")]
+
+    no_armor = calculator.calculate_burst_combo(
+        zed,
+        level=13,
+        items=items,
+        runes=runes,
+        target_health=2000,
+        target_armor=0,
+        target_magic_resist=0,
+    )
+    high_armor = calculator.calculate_burst_combo(
+        zed,
+        level=13,
+        items=items,
+        runes=runes,
+        target_health=2000,
+        target_armor=100,
+        target_magic_resist=0,
+    )
+    negative_armor = calculator.calculate_burst_combo(
+        zed,
+        level=13,
+        items=items,
+        runes=runes,
+        target_health=2000,
+        target_armor=-50,
+        target_magic_resist=0,
+    )
+
+    assert high_armor < no_armor
+    physical_damage = 2 * (no_armor - high_armor)
+    magic_damage = no_armor - physical_damage
+
+    high_expected = physical_damage * (100 / (100 + 100)) + magic_damage
+    negative_expected = physical_damage * (2 - 100 / (100 - (-50))) + magic_damage
+
+    assert high_armor == pytest.approx(high_expected, rel=0.05)
+    assert negative_armor == pytest.approx(negative_expected, rel=0.05)

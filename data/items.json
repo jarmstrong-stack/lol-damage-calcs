@@ -58,5 +58,22 @@
         "scaling": {"ability_power": 0.2}
       }
     ]
+  },
+  "eclipse": {
+    "id": "eclipse",
+    "name": "Eclipse",
+    "stats": {
+      "attack_damage": 70,
+      "ability_haste": 15
+    },
+    "passives": [
+      {
+        "type": "spell_burst",
+        "damage": 80,
+        "scaling": {"attack_damage": 0.4},
+        "cooldown": 8,
+        "damage_type": "physical"
+      }
+    ]
   }
 }

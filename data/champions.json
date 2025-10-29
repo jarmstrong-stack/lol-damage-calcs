@@ -112,5 +112,51 @@
       }
     },
     "combo_sequence": ["Q", "E", "E", "E", "R"]
+  },
+  "zed": {
+    "id": "zed",
+    "name": "Zed",
+    "role": "assassin",
+    "base_stats": {
+      "attack_damage": 63,
+      "attack_damage_per_level": 3.4,
+      "attack_speed": 0.658,
+      "attack_speed_per_level": 0.025,
+      "ability_power": 0,
+      "ability_haste": 0
+    },
+    "abilities": {
+      "Q": {
+        "name": "Razor Shuriken",
+        "max_rank": 5,
+        "rank_levels": [1, 4, 5, 7, 9],
+        "base_damage": [70, 110, 150, 190, 230],
+        "scalings": {"attack_damage": 1.0},
+        "cooldown": [6, 5.5, 5, 4.5, 4],
+        "damage_type": "physical",
+        "damage_window": "instant"
+      },
+      "E": {
+        "name": "Shadow Slash",
+        "max_rank": 5,
+        "rank_levels": [2, 3, 5, 7, 9],
+        "base_damage": [70, 95, 120, 145, 170],
+        "scalings": {"attack_damage": 0.65},
+        "cooldown": [5, 4.5, 4, 3.5, 3],
+        "damage_type": "physical",
+        "damage_window": "instant"
+      },
+      "R": {
+        "name": "Death Mark",
+        "max_rank": 3,
+        "rank_levels": [6, 11, 16],
+        "base_damage": [100, 175, 250],
+        "scalings": {"attack_damage": 0.65},
+        "cooldown": [120, 100, 80],
+        "damage_type": "physical",
+        "damage_window": "instant"
+      }
+    },
+    "combo_sequence": ["Q", "E", "AA", "R"]
   }
 }

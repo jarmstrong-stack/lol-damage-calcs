@@ -55,6 +55,18 @@ def main(argv: Sequence[str] | None = None) -> None:
         default=None,
         help="Override target health used for passives and calculations.",
     )
+    parser.add_argument(
+        "--target-armor",
+        type=float,
+        default=None,
+        help="Armor value applied to physical damage calculations.",
+    )
+    parser.add_argument(
+        "--target-magic-resist",
+        type=float,
+        default=None,
+        help="Magic resist value applied to magic damage calculations.",
+    )
 
     args = parser.parse_args(argv)
 
@@ -84,6 +96,8 @@ def main(argv: Sequence[str] | None = None) -> None:
             top_n=args.top,
             duration=args.duration,
             target_health=args.target_health,
+            target_armor=args.target_armor,
+            target_magic_resist=args.target_magic_resist,
             rune_pool=rune_pool,
         )
         if not builds:
